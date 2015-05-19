@@ -1,0 +1,64 @@
+<html>
+<head>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript">
+    google.load('visualization', '1.1', {packages: ['line']});
+    google.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Days of the Week');
+      data.addColumn('number', 'Drink Tweets');
+      data.addColumn('number', 'Traffic Tweets');
+      //data.addColumn('number', 'Transformers: Age of Extinction');
+
+      data.addRows([
+          ['00',  459,      10],
+          ['01',  402,      0],
+          ['02',  327,       10],
+          ['03',  337,      6],
+	  ['04',  209,      7],
+	  ['05',  137,      2],
+	  ['06',  79,      1],
+	  ['07',  63,      1],
+	  ['08',  35,      1],
+	  ['09',  27,      8],
+	  ['10',  43,      9],
+	  ['11',  81,      6],
+	  ['12',  107,      13],
+	  ['13',  158,      8],
+	  ['14',  172,      19],
+	  ['15',  234,      7],
+	  ['16',  268,      8],
+	  ['17',  276,      7],
+	  ['18',  283,      6],
+	  ['19',  289,      11],
+	  ['20',  318,      18],
+	  ['21',  356,      13],
+	  ['22',  384,      22],
+	  ['23',  415,      8]
+        
+      ]);
+
+      var options = {
+        chart: {
+          title: 'The Relationship between drinkining and traffic accidents during hours of a day.',
+          subtitle: ''
+        },
+        width: 900,
+        height: 500
+      };
+
+      var chart = new google.charts.Line(document.getElementById('linechart_material'));
+
+      chart.draw(data, options);
+    }
+  </script>
+</head>
+<body>
+	
+  <div id="linechart_material" width="400" height="450"></div>
+	
+</body>
+</html>

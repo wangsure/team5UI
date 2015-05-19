@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title> - jsFiddle demo</title>
+  
+  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  
+ 
+  
+
+
+<script type='text/javascript'>//<![CDATA[ 
+
+$(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Top 20 Mentioned Users in Miami'
+        },
+        subtitle: {
+            text: ''
+        },
+        xAxis: {
+            type: 'category',
+            labels: {
+                rotation: -45,
+                style: {
+                    fontSize: '16px',
+                    fontFamily: 'Verdana, sans-serif'
+                }
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Number of Followers'
+            }
+        },
+        legend: {
+            enabled: false
+        },
+        tooltip: {
+            pointFormat: 'Number of Followers: <b>{point.y:.1f}</b>'
+        },
+        series: [{
+            name: 'Population',
+            data: [
+                ['tnkthemonstah', 5856],
+                ['youtube', 2731],
+                ['enjoyphoenix', 2008],
+                ['djmarcd', 1796],
+                ['waltdisneyworld', 1666],
+                ['justinbieber', 1031],
+                ['sportscenter', 1025],
+                ['woridstarhlphop', 830],
+                ['chlldhoodruiner', 799],
+                ['sexualgif', 786],
+		['luceromexico', 710],
+                ['sincerelytumblr', 697],
+                ['nbcthevoice', 694],
+                ['tgradous', 641],
+                ['marylene', 630],
+                ['weloverobdyrdek', 613],
+                ['radiodisneyla', 607],
+                ['girlposts', 578],
+                ['jlo', 576],
+                ['larryvance', 548]
+            ],
+            dataLabels: {
+                //enabled: true,
+                //rotation: -00,
+                //color: 'red',
+                //align: 'center',
+                //format: '{point.y:.1f}', // one decimal
+                //y: 20, // 10 pixels down from the top
+               style: {
+                    fontSize: '9px',
+                    fontFamily: 'Verdana, sans-serif'
+                }
+            }
+        }]
+    });
+});
+//]]>  
+
+</script>
+
+
+</head>
+<body>
+  <script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+<div id="container" style="min-width: 300px; height: 400px; margin: 0 auto"></div>
+
+  
+</body>
+
+
+</html>
+
+

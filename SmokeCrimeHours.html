@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Hours of a Day', 'Smoke-Related Tweets', 'Crime-Related Tweets'],
+          ['00',  2390,      547],
+          ['01',  2596,      662],
+          ['02',  2461,       599],
+          ['03',  1906,      437],
+	  ['04',  1385,       343],
+	  ['05',  855,       189],
+	  ['06',  590,       137],
+	  ['07',  377,       108],
+	  ['08',  224,       87],
+	  ['09',  386,        87],
+	  ['10',  982,      184],
+	  ['11',  1323,       228],
+	  ['12',  1559,       294],
+	  ['13',  1902,       346],
+	  ['14',  2131,       450],
+	  ['15',  2000,       505],
+	  ['16',  2000,       454],
+	  ['17',  2010,       481],
+	  ['18',  1910,       424],
+	  ['19',  1915,       471],
+	  ['20',  2030,       496],
+	  ['21',  1011,       518],
+	  ['22',  2074,       556],
+	  ['23',  2154,       553]
+        ]);
+
+        var options = {
+          title: 'Smoke VS. Crime (Hours of a Day)',
+          hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0}
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="chart_div" style="width: 700px; height: 480px;"></div>
+  </body>
+</html>

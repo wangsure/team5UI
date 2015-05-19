@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title> - jsFiddle demo</title>
+  
+  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  
+ 
+  
+
+
+<script type='text/javascript'>//<![CDATA[ 
+
+$(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Fire-Related Tweets in Different Hours of a Day '
+        },
+        subtitle: {
+            text: ''
+        },
+        xAxis: {
+            type: 'category',
+            labels: {
+                rotation: -45,
+                style: {
+                    fontSize: '16px',
+                    fontFamily: 'Verdana, sans-serif'
+                }
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Number of Tweets'
+            }
+        },
+        legend: {
+            enabled: false
+        },
+        tooltip: {
+            pointFormat: 'Number of Tweets: <b>{point.y:.1f}</b>'
+        },
+        series: [{
+            name: 'Population',
+            data: [
+                ['00', 294],
+                ['01', 274],
+                ['02', 256],
+                ['03', 198],
+                ['04', 149],
+                ['05', 88],
+                ['06', 60],
+                ['07', 37],
+                ['05', 26],
+                ['09', 33],
+		['10', 58],
+                ['11', 103],
+                ['12', 127],
+                ['13', 196],
+                ['14', 182],
+                ['15', 187],
+                ['16', 195],
+                ['17', 202],
+                ['18', 210],
+                ['19', 210],
+		['20', 219],
+		['21', 208],
+		['22', 247],
+		['23', 235]
+            ],
+            dataLabels: {
+                //enabled: true,
+                //rotation: -00,
+                //color: 'red',
+                //align: 'center',
+                //format: '{point.y:.1f}', // one decimal
+                //y: 20, // 10 pixels down from the top
+               style: {
+                    fontSize: '9px',
+                    fontFamily: 'Verdana, sans-serif'
+                }
+            }
+        }]
+    });
+});
+//]]>  
+
+</script>
+
+
+</head>
+<body>
+  <script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+<div id="container" style="min-width: 300px; height: 400px; margin: 0 auto"></div>
+
+  
+</body>
+
+
+</html>
+
+

@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Suburb', 'Smoke-Related Tweets', 'Crime-Related Tweets'],
+          ['Miami CBD',  1936,      698],
+          ['Miami Beach',  738,      102],
+          ['Miami Lakes',  19,       5],
+          ['Miami Shores',  70,      16],
+	  ['Miami Springs',  59,       7],
+	  ['North Miami',  24,       5],
+	  ['North Miami Beach',  29,       5],
+	  ['South Miami',  26,       4],
+	  ['South Miami Heights',  46,       1120],
+	  ['West Miami',  16,       4],
+	  ['Miamisburg',  2,       0],
+	  ['Miami International Airport (MIA)',  2,       0],
+	  ['Miami Beach Convention Center',  1,       0]
+        ]);
+
+        var options = {
+          title: 'Smoke VS. Crime (In Suburbs)',
+          hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0}
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="chart_div" style="width: 700px; height: 480px;"></div>
+  </body>
+</html>
